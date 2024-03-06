@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.maulida.kinanti.adminpeminjamanalat.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -34,6 +35,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         barang.setOnClickListener(this);
         peminjaman.setOnClickListener(this);
         profile.setOnClickListener(this);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.bthome);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.bthome) {
+                return true;
+            } else if (item.getItemId() == R.id.btkat) {
+                startActivity(new Intent(getApplicationContext(), KategoriActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.btbrg) {
+                startActivity(new Intent(getApplicationContext(), BarangActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.btdata) {
+                startActivity(new Intent(getApplicationContext(), PeminjamanActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            }
+            return false;
+        });
     }
 
     @Override
