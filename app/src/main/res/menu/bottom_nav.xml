@@ -7,6 +7,18 @@
         android:icon="@drawable/home"
         android:title="Beranda" />
     <item
+        android:id="@+id/btkat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/kategori"
+        android:title="Kategori" />
+    <item
+        android:id="@+id/btbrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/barang"
+        android:title="Barang" />
+    <item
         android:id="@+id/btdata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
