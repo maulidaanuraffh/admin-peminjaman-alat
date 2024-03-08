@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.Map;
 
 public class KategoriActivity extends AppCompatActivity implements View.OnClickListener{
-    private static final String URL = "http://192.168.10.83/pinjambarang/show_data_kategori.php";
-    private static final String URL3 = "http://192.168.10.83/pinjambarang/query_IUD_kategori.php";
+    private static final String URL = "http://172.16.202.209/pinjambarang/show_data_kategori.php";
+    private static final String URL3 = "http://172.16.202.209/pinjambarang/query_IUD_kategori.php";
 
     private static final int INSERT_MODE = 1;
     private static final int UPDATE_MODE = 2;

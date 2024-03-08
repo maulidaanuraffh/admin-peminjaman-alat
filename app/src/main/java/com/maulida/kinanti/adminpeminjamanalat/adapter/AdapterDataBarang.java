@@ -1,5 +1,6 @@
 package com.maulida.kinanti.adminpeminjamanalat.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.maulida.kinanti.adminpeminjamanalat.R;
 import com.maulida.kinanti.adminpeminjamanalat.ui.BarangActivity;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -49,8 +51,26 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
         });
         // End new
 
-        if (!data.get("url").equals("")) {
-            Picasso.get().load(data.get("url")).into(holder.photo);
+//        if (!data.get("url").equals("")) {
+//            Picasso.get().load(data.get("url")).into(holder.photo);
+//        }
+
+        if (!data.get("url").isEmpty()) {
+            Picasso.get().load(data.get("url")).into(holder.photo, new Callback() {
+                @Override
+                public void onSuccess() {
+                    // Image loaded successfully
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    // Log error
+                    Log.e("Picasso", "Error loading image: " + e.getMessage());
+                }
+            });
+        } else {
+            // If the URL is empty, you can set a placeholder image here
+            holder.photo.setImageResource(R.drawable.prev2);
         }
     }
 

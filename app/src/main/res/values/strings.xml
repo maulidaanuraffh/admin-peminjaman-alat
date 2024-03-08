@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Admin Peminjaman Alat</string>
-    <string name="selamat_datang">Selamat Datang\ndi PRASAPIN</string>
-    <string name="desc">Dapatkan akses peminjaman alat yang lebih mudah dan cepat dengan menggunakan aplikasi PRASAPIN.</string>
+    <string name="selamat_datang">Selamat Datang\ndi AJUPIN</string>
+    <string name="desc">Dapatkan akses peminjaman alat yang lebih mudah dan cepat dengan menggunakan aplikasi AJUPIN.</string>
 </resources>

@@ -41,8 +41,8 @@ public class PeminjamanActivity extends AppCompatActivity implements View.OnClic
     private List<HashMap<String, String>> daftarBarang = new ArrayList<>();
     private Bitmap bitmap;
 
-    private final String url = "http://192.168.10.83/pinjambarang/show_data_peminjaman.php";
-    private final String url2 = "http://192.168.10.83/pinjambarang/get_nama_barang.php";
+    private final String url = "http://172.16.202.209/pinjambarang/show_data_peminjaman.php";
+    private final String url2 = "http://172.16.202.209/pinjambarang/get_nama_barang.php";
     private String imStr = "";
     private String pilihKategori = "";
     private ImageView imagekp;

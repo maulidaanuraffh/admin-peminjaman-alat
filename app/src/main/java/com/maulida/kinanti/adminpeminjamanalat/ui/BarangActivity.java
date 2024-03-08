@@ -61,9 +61,9 @@ public class BarangActivity extends AppCompatActivity implements View.OnClickLis
     private String imStr = "";
     private String pilihKategori = "";
 
-    private final String url = "http://192.168.10.83/pinjambarang/show_data_barang.php";
-    private final String url2 = "http://192.168.10.83/pinjambarang/get_nama_kategori.php";
-    private final String url3 = "http://192.168.10.83/pinjambarang/query_IUD_barang.php";
+    private final String url = "http://172.16.202.209/pinjambarang/show_data_barang.php";
+    private final String url2 = "http://172.16.202.209/pinjambarang/get_nama_kategori.php";
+    private final String url3 = "http://172.16.202.209/pinjambarang/query_IUD_barang.php";
     private final Map<String, String> params = new HashMap<>();
     private final ArrayList<HashMap<String, String>> daftarBarang = new ArrayList<>();
     public final ArrayList<String> daftarKategori = new ArrayList<>();
@@ -200,8 +200,8 @@ public class BarangActivity extends AppCompatActivity implements View.OnClickLis
                 String XML = "{'kode_barang':'" + kode + "','nama_barang':'" + nama + "'}";
 
                 QRGEncoder qrgEncoder = new QRGEncoder(XML, null, QRGContents.Type.TEXT, 300);
-                qrgEncoder.setColorBlack(Color.RED);
-                qrgEncoder.setColorWhite(Color.BLUE);
+                qrgEncoder.setColorBlack(Color.BLACK);
+                qrgEncoder.setColorWhite(Color.WHITE);
 
                 // Getting QR-Code as Bitmap without margin
                 bitmap = qrgEncoder.getBitmap(0);
